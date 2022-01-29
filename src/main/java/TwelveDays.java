@@ -1,4 +1,3 @@
-import java.util.Arrays;
 class TwelveDays {
     public static final String[] day={
             "first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth","eleventh","twelfth"};
@@ -14,9 +13,9 @@ class TwelveDays {
             StringBuilder verseBuilder=new StringBuilder();
             for(int i=0;i<verseNumber-1;i++)
             {
-                verseBuilder.append(verse[verseNumber-i-1]+", ");
+                verseBuilder.append(verse[verseNumber - i - 1]).append(", ");
             }
-            verseBuilder.append("and "+verse[0]);
+            verseBuilder.append("and ").append(verse[0]);
             String x=String.valueOf(verseBuilder);
             return "On the "+day[verseNumber-1]+" day of Christmas my true love gave to me: "+x+".\n";
         }}
@@ -25,7 +24,7 @@ class TwelveDays {
         StringBuilder verseBuilder=new StringBuilder();
         for(int i=startVerse;i<endVerse;i++)
         {
-            verseBuilder.append(verse(i)+"\n");
+            verseBuilder.append(verse(i)).append("\n");
         }
         verseBuilder.append(verse(endVerse));
         return String.valueOf(verseBuilder);
@@ -36,7 +35,7 @@ class TwelveDays {
         StringBuilder verseBuilder=new StringBuilder();
         for(int i=1;i<12;i++)
         {
-            verseBuilder.append(verse(i)+"\n");
+            verseBuilder.append(verse(i)).append("\n");
         }
         verseBuilder.append(verse(12));
         return String.valueOf(verseBuilder);
